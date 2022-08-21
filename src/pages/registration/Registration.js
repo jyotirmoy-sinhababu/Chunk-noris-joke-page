@@ -7,11 +7,20 @@ const Registration = () => {
   const handleChange = (e) => {
     setData({ ...data, [e.target.name]: [e.target.value] });
   };
-  console.log(data);
+
+  const handelSubmit = (e) => {
+    localStorage.setItem('data', JSON.stringify(data));
+  };
 
   return (
     <div className='form-container'>
-      <form>
+      <form
+        className='form-section'
+        onSubmit={(e) => {
+          e.preventDefault();
+          handelSubmit(e);
+        }}
+      >
         <input
           onChange={(e) => {
             handleChange(e);
@@ -41,6 +50,11 @@ const Registration = () => {
           name='password'
           className='reg-frm-inp'
         />
+        <div className='form-btn-cnt'>
+          <button type='submit' className='submit-btn'>
+            Submit
+          </button>
+        </div>
       </form>
     </div>
   );
