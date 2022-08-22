@@ -1,0 +1,52 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding-top: 80px;
+}
+
+.login-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+  max-width: 450px;
+  height: 650px;
+}
+
+.login-formInp {
+  font-size: 20px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+.login-btn-cnt {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+}
+
+.log-btn {
+  text-decoration: none;
+  width: 100px;
+  height: 60px;
+  font-size: 1.2em;
+  font-weight: 500;
+  color: rgb(71, 71, 243);
+  border-radius: 8px;
+  border: none;
+}
+
+.signup-btn {
+  text-decoration: none;
+  width: 100px;
+  height: 60px;
+  font-size: 1.2em;
+  font-weight: 500;
+  color: rgb(71, 71, 243);
+
+  border-radius: 8px;
+  border: none;
+}

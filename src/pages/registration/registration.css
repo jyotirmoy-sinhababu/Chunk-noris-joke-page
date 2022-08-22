@@ -1,0 +1,57 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding-top: 80px;
+}
+
+.heading {
+  width: 100%;
+  max-width: 450px;
+  height: 50px;
+  padding-left: 248px;
+  font-size: 1.5rem;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+  max-width: 450px;
+  height: 650px;
+}
+
+.reg-frm-inp {
+  font-size: 16px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+.form-btn-cnt {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+}
+
+.login-btn {
+  text-decoration: none;
+  width: 150px;
+  height: 60px;
+  font-size: 1.2em;
+  font-weight: 500;
+  color: rgb(71, 71, 243);
+}
+
+.submit-btn {
+  background-color: transparent;
+  border: 1px solid;
+  margin-left: auto;
+  color: white;
+  font-size: 1.2em;
+  background-color: rgb(132, 132, 235);
+  border-radius: 8px;
+  width: 100px;
+}

@@ -1,5 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+
+import './registration.css';
 
 const Registration = () => {
   const [data, setData] = useState({});
@@ -14,6 +17,7 @@ const Registration = () => {
 
   return (
     <div className='form-container'>
+      <div className='heading'>Register as an user</div>
       <form
         className='form-section'
         onSubmit={(e) => {
@@ -51,6 +55,9 @@ const Registration = () => {
           className='reg-frm-inp'
         />
         <div className='form-btn-cnt'>
+          <NavLink to='/login' className='login-btn'>
+            LogIN
+          </NavLink>
           <button type='submit' className='submit-btn'>
             Submit
           </button>

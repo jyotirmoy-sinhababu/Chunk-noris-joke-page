@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import './login.css';
 
 const LogIn = () => {
   const navigate = useNavigate();
@@ -26,9 +27,11 @@ const LogIn = () => {
 
   return (
     <div className='login-container'>
+      <h3>log in</h3>
       <form
         className='login-section'
         onSubmit={(e) => {
+          e.preventDefault();
           logInVerification(e);
         }}
       >
@@ -51,10 +54,10 @@ const LogIn = () => {
           className='login-formInp'
         />
         <div className='login-btn-cnt'>
-          <button className='login-btn'>LogIn</button>
           <NavLink to='/reg' className='signup-btn'>
             Sign-up
           </NavLink>
+          <button className='log-btn'>LogIn</button>
         </div>
       </form>
     </div>
