@@ -8,19 +8,21 @@ const LogIn = () => {
   const navigate = useNavigate();
 
   const registeredData = JSON.parse(localStorage.getItem('data'));
-
+  // console.log(registeredData);
   const [loginData, setLoginData] = useState({});
 
   const loginInput = (e) => {
-    setLoginData({ ...loginData, [e.target.name]: [e.target.value] });
+    setLoginData({ ...loginData, [e.target.name]: e.target.value });
   };
-
   const logInVerification = (e) => {
     if (Object.keys(loginData).length == 2) {
+      console.log('ok');
+
       if (
         loginData.email === registeredData.email &&
         loginData.password === registeredData.password
       ) {
+        navigate('/main');
       }
     }
   };
@@ -57,7 +59,9 @@ const LogIn = () => {
           <NavLink to='/reg' className='signup-btn'>
             Sign-up
           </NavLink>
-          <button className='log-btn'>LogIn</button>
+          <button type='submit' className='log-btn'>
+            LogIn
+          </button>
         </div>
       </form>
     </div>

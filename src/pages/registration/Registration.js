@@ -1,19 +1,21 @@
 import React from 'react';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-
+import { useNavigate } from 'react-router-dom';
 import './registration.css';
 
 const Registration = () => {
   const [data, setData] = useState({});
 
   const handleChange = (e) => {
-    setData({ ...data, [e.target.name]: [e.target.value] });
+    setData({ ...data, [e.target.name]: e.target.value });
   };
 
   const handelSubmit = (e) => {
     localStorage.setItem('data', JSON.stringify(data));
   };
+
+  const navigation = useNavigate();
 
   return (
     <div className='form-container'>
@@ -23,6 +25,7 @@ const Registration = () => {
         onSubmit={(e) => {
           e.preventDefault();
           handelSubmit(e);
+          navigation('/login');
         }}
       >
         <input
