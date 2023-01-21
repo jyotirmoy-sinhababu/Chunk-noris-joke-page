@@ -4,23 +4,17 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 
 const Main = () => {
-  const [firstPost, setFirstPost] = useState('');
+  const [apiData, setApiData] = useState('');
 
   useEffect(() => {
     axios.get('https://api.chucknorris.io/jokes/random').then((res) => {
       console.log(res.data);
-      setFirstPost(res.data.value);
+      setApiData(res.data);
     });
   }, []);
   return (
     <>
-      {firstPost ? (
-        <div className='main-container'>
-          <div>{firstPost}</div>
-        </div>
-      ) : (
-        'No data'
-      )}
+      <div>hi</div>
     </>
   );
 };
