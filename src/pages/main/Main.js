@@ -3,6 +3,9 @@ import axios from 'axios';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
+import Card from '../../components/card/Card';
+import Nav from '../../components/nav/Nav';
+
 const Main = () => {
   const [apiData, setApiData] = useState('');
 
@@ -14,7 +17,12 @@ const Main = () => {
   }, []);
   return (
     <>
-      <div>hi</div>
+      <div>
+        <Nav />
+      </div>
+      <div>
+        <Card apiData={apiData} />
+      </div>
     </>
   );
 };
